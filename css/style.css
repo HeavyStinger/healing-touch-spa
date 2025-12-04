@@ -1,0 +1,223 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+/* Libraries */
+@import url("../vendor/corbzhamburger/hamburger.css");
+
+@import url("reset.css");
+@import url("variables.css");
+@import url("base.css");
+
+/* Global Styles */
+
+/* group-style Homepage */
+
+/* Hero */
+
+ .hero {
+    min-height: 500px;
+    width: 100%;
+    background: linear-gradient(to top right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
+    url(../images/hero.webp);
+    background-size: cover;
+    background-position: bottom;
+    background-blend-mode: multiply;
+    position: relative;
+}
+
+.hero > .content {
+    position: absolute;
+    top: 55%;
+    left: 30px;
+    transform: translateY(-50%);
+    /* bottom: 80px; */
+    color: white;
+}
+
+.hero > .content > .subtitle {
+    font-size: 14px;
+    opacity: 0.8;
+    text-transform: capitalize;
+}
+
+.hero > .content > .title {
+    margin-top: 2px;
+    font-family: var(--accent-font);
+    font-weight: normal;
+    /* font-size: 80px; */
+    font-size: 60px;
+    text-transform: capitalize;
+    line-height: 1;
+}
+
+.hero > .content > .title > div {
+    color: var(--accent-color);
+}
+
+.hero > .content > button {
+    margin-top: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+    .hero {
+        min-height: 600px;
+        width: calc(100% - (var(--page-x-deadzone) * 2));
+        margin: 0 var(--page-x-deadzone);
+        border-radius: 25px;
+    }
+
+    .hero > .content {
+        top: unset;
+        bottom: 50px;
+        left: 50px;
+        transform: unset;
+    }
+}
+
+/* Services */
+.services-home {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-top: var(--page-y-spacing);
+    padding: 0 var(--page-x-deadzone);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-title {
+    text-align: center;
+    font-family: var(--accent-font);
+    font-size: 40px;
+}
+
+.section-subtitle {
+    text-align: center;
+}
+
+.services-home > .content {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--page-y-spacing);
+}
+
+.services-home > .content > .card {
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.services-home > .content > .card > img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.services-home > .content > .card > .title {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.services-home > .content > .card > .details {
+    margin-top: 10px;
+    text-align: justify;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+@media only screen and (min-width: 768px) {
+    .services-home > .content {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--page-x-deadzone);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .services-home > .content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Testimonials */
+
+.testimonials {
+    width: 100%;
+    margin-top: var(--page-y-spacing);
+    padding: 0 var(--page-x-deadzone);
+    position: relative;
+}
+
+.testimonials > .content {
+    margin: 25px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--page-y-spacing);
+}
+
+.testimonials > .content > .card {
+    height: 350px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: color;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    color: rgba(0, 0, 0, 0.8);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.testimonials > .content > .card > .description {
+    font-style: italic;
+    line-height: 1.2;
+    transition: opacity 0.2s;
+}
+
+.testimonials > .content > .card > .name {
+    color: black;
+    font-family: var(--accent-font);
+    /* font-weight: bold; */
+    font-size: 25px;
+    /* color: var(--accent-color); */
+    transition: color 0.2s;
+}
+
+/* Card hover animation */
+.testimonials > .content > .card:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.testimonials > .content > .card:hover > .description {
+    opacity: 0;
+}
+
+.testimonials > .content > .card:hover > .name {
+    color: white;
+}
+
+@media only screen and (min-width: 650px) {
+    .testimonials > .content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 975px) {
+    .testimonials > .content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

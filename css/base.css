@@ -1,0 +1,131 @@
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+}
+
+html {
+    width: 100dvw;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: var(--primary-font);
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    width: calc(100% - (var(--page-x-deadzone) * 2));
+    background-color: var(--primary-color);
+    margin: 0 var(--page-x-deadzone);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+nav > .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+nav > .logo > img {
+    height: 50px;
+}
+
+.nav-links {
+    width: calc(100% + (var(--page-x-deadzone) * 2));
+    background-color: whitesmoke;
+    padding: 10px 0;
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+    pointer-events: none;
+    z-index: 2;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links.active {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0px);
+    pointer-events: auto;
+}
+
+.nav-links > a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav > .hamburger {
+    /* display: none; */
+    padding: 22px 13px;
+    background-color: var(--accent-color);
+    border-radius: 8px;
+}
+
+nav > .cta-button {
+    display: none;
+}
+
+/* Desktop Nav */
+@media only screen and (min-width: 992px) {
+    nav > .hamburger {
+        display: none;
+    }
+
+    nav > .cta-button {
+        display: block;
+    }
+
+    nav > .nav-links {
+        width: unset;
+        background-color: transparent;
+        flex-direction: row;
+        top: unset;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+        transition: unset;
+    }
+
+    nav > .nav-links > .cta-button {
+        display: none;
+    }
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    padding: 9px 27px;
+    border: 2px solid var(--accent-color);
+    border-radius: 25px;
+    font-family: var(--primary-font);
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+nav > .cta-button:hover {
+    color: black;
+}
+
+.cta-button:hover {
+    background-color: rgb(79, 132, 154, 0.4);
+}
