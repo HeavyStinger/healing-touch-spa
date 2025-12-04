@@ -55,7 +55,7 @@
     color: var(--accent-color);
 }
 
-.hero > .content > button {
+.hero > .content > .cta-button {
     margin-top: 20px;
 }
 
@@ -165,7 +165,7 @@
 }
 
 .testimonials > .content > .card {
-    height: 350px;
+    min-height: 350px;
     width: 100%;
     background-color: rgba(255, 255, 255, 1);
     background-size: cover;
