@@ -394,11 +394,13 @@
     padding: 0 var(--page-x-deadzone);
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: var(--page-y-spacing);
 }
 
 .services > .content > .card {
     min-height: 350px;
+    max-width: 350px;
     width: 100%;
     background-color: rgb(158, 61, 74);
     padding: 20px;
@@ -471,4 +473,114 @@
 
 .services > .content > .card > .cta-button {
     margin-top: auto;
+}
+
+@media only screen and (min-width: 810px) {
+    .services > .content {
+        justify-content: space-between;
+        align-items: unset;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .services > .content > .card {
+        max-width: 350px;
+        flex: 1 1 calc(40% - 50px);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .services > .content > .card {
+        max-width: 400px;
+        flex: 1 1 calc(33% - 50px);
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .services > .content > .card {
+        max-width: 400px;
+        flex: 1 1 calc(25% - 50px);
+    }
+}
+
+.services-waxing {
+    width: 100%;
+    margin-top: var(--page-y-spacing);
+}
+
+.services-waxing > .content {
+    width: 100%;
+    margin-top: 25px;
+    padding: 0 var(--page-x-deadzone);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    gap: 25px;
+}
+
+.services-waxing > .content > .card {
+    max-width: 300px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+}
+
+.services-waxing > .content > .card > img {
+    margin: 0 auto 0 auto;
+    display: block;
+}
+
+.services-waxing > .content > .card > .title {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+.services-waxing > .content > .card > .prices {
+    width: 100%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.services-waxing > .content > .card > .prices > .price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.services-waxing > .content > .card > .prices > .price::after {
+    content: "";
+    height: 2px;
+    width: 25px;
+    background-color: var(--accent-color);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+.services-waxing > .content > .card > .prices > .price > .cost > span {
+    font-weight: bold;
+}
+
+.services-waxing > .content > .card > .cta-button {
+    width: 100%;
+    margin-top: auto;
+    display: block;
 }

@@ -25,6 +25,7 @@ body {
     padding: 9px 27px;
     display: inline-block;
     text-align: center;
+    text-decoration: none;
     font-family: var(--primary-font);
     color: white;
     letter-spacing: 1px;
