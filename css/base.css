@@ -230,6 +230,17 @@ footer > .footer-content > .bottom > .footer-contact a:hover svg {
     fill: var(--accent-color);
 }
 
+footer > .designer {
+    width: 100%;
+    background-color: var(--accent-color);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+}
+
 /* Adjust for wider screens */
 
 @media only screen and (min-width: 600px) {
