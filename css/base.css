@@ -237,8 +237,19 @@ footer > .designer {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
     color: white;
     font-size: 14px;
+}
+
+footer > .designer > a {
+    height: 17px;
+    display: block;
+}
+
+footer > .designer > a > svg {
+    height: 17px;
+    fill: white;
 }
 
 /* Adjust for wider screens */

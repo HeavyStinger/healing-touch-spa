@@ -46,6 +46,11 @@ window.addEventListener("DOMContentLoaded", () => {
             const values = skateType.split("|");
             button.href = page + "?" + "service=Waxing" + "&option=" + values[1];
         }
+        else {
+            return;
+        }
+
+        button.href += "#contact-form";
     });
 })
 // Legend
