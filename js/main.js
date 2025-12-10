@@ -6,23 +6,52 @@ menuButton.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
 
-// Show team member information on title click
+// Set active current link
+window.addEventListener("DOMContentLoaded", () => {
+    const navButtons = document.querySelectorAll("nav a");
+    const footerButtons = document.querySelectorAll("footer a");
 
-const titles = document.querySelectorAll(".team .content .card .details .title");
-titles.forEach(title => {
-    title.addEventListener("click", () => {
-        const details = title.parentElement;
-        const card = details.parentElement;
-        const checker = details.classList.toggle("active");
+    navButtons.forEach((button) => {
+        if (button.getAttribute("href") == "#") {
+            button.classList.add("active");
+        }
+    })
 
-        if (checker) {
-            setTimeout(() => {
-                card.classList.toggle("active");
-            }, 400);
+    footerButtons.forEach((button) => {
+        if (button.getAttribute("href") == "#") {
+            button.classList.add("active");
         }
-        else {
-            card.classList.toggle("active");
-        }
-        console.log("Work");
     })
 });
+
+// Automatically assign buttons based on their skate-type
+window.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll("[skate-type]");
+    const page = "contact.html";
+
+    buttons.forEach((button) => {
+        const skateType = button.getAttribute("skate-type");
+        if (skateType == "OG") {
+            button.href = page;
+        }
+        else if (skateType.includes("patpack")) {
+            const values = skateType.split("|");
+            button.href = page + "?" + "service=Package" + "&option=" + values[1];
+        }
+        else if (skateType.includes("patdown")) {
+            const values = skateType.split("|");
+            button.href = page + "?" + "service=Massage" + "&option=" + values[1];
+        }
+        else if (skateType.includes("wax")) {
+            const values = skateType.split("|");
+            button.href = page + "?" + "service=Waxing" + "&option=" + values[1];
+        }
+    });
+})
+// Legend
+{
+    // OG - no params
+    // patpack - Is a package and carries an option after |
+    // patdown - Is a massage and carries an option after |
+    // wax - Is a wax and can carry an option after | or stay alone
+}

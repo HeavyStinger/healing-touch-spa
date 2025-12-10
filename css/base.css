@@ -35,10 +35,6 @@ body {
     transition: background-color 0.2s ease;
 }
 
-nav > .cta-button:hover {
-    color: black;
-}
-
 .cta-button:hover {
     background-color: rgb(79, 132, 154, 0.4);
 }
@@ -99,8 +95,12 @@ nav > .logo > img {
     cursor: pointer;
 }
 
-.nav-links > a:hover {
+.nav-links > a:hover, .nav-links > a.active {
     color: var(--accent-color);
+}
+
+.nav-links > a.cta-button {
+    color: white !important;
 }
 
 nav > .hamburger {
@@ -183,10 +183,6 @@ footer > .footer-content > .footer-company > .cta-button {
     width: fit-content;
 }
 
-footer > .footer-content > .footer-company > .cta-button:hover {
-    color: black;
-}
-
 footer > .footer-content .title {
     font-family: var(--secondary-font);
     font-size: 20px;
@@ -209,7 +205,7 @@ footer > .footer-content > .bottom > .footer-links a, footer > .footer-content >
     color: black;
 }
 
-footer > .footer-content > .bottom > .footer-links a:hover, footer > .footer-content > .bottom > .footer-contact a:hover {
+footer > .footer-content > .bottom > .footer-links a.active, footer > .footer-content > .bottom > .footer-links a:hover, footer > .footer-content > .bottom > .footer-contact a:hover {
     color: var(--accent-color);
 }
 

@@ -719,3 +719,174 @@
     margin-top: auto;
     display: block;
 }
+
+/* Contact Page */
+
+.contact {
+    width: 100%;
+    margin-top: var(--page-y-spacing);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--page-y-spacing);
+}
+
+.contact > .contact-form {
+    width: 100%;
+    max-width: 500px;
+    padding: 0 var(--page-x-deadzone);
+}
+
+.contact > .contact-form > .title {
+    font-size: 20px;
+}
+
+.contact > .contact-form > form {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact > .contact-form > form > input {
+    width: 100%;
+    font-family: var(--primary-font);
+}
+
+.contact > .contact-form > form .input-simple {
+    padding: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    border-bottom: 2px solid var(--accent-color);
+    outline: none;
+}
+
+.contact > .contact-form > form > .select-menus {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact > .contact-form > form .select-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.contact > .contact-form > form .select-wrapper > select {
+    width: 100%;
+    cursor: pointer;
+}
+
+.contact > .contact-form > form .select-wrapper::after {
+    content: "";
+    height: 5px;
+    width: 5px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%) rotate(45deg);
+    border-right: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.contact > .contact-form > form label {
+    margin-top: 10px;
+}
+
+.contact > .contact-form > form > button[type=submit] {
+    margin-top: 20px;
+}
+
+.contact > .location {
+    width: 100%;
+    max-width: 500px;
+    padding: 0 var(--page-x-deadzone);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact > .location > .title {
+    font-size: 20px;
+}
+
+.contact > .location > iframe {
+    height: 350px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.contact > .location > .socials {
+    width: 100%;
+    /* padding: 0 var(--page-x-deadzone); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.contact > .location > .socials > a > svg {
+    height: 28px;
+}
+
+.contact > .location > .socials > a:hover > svg {
+    fill: var(--accent-color);
+}
+
+@media only screen and (min-width: 800px) {
+    .contact {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: unset;
+        gap: var(--page-x-deadzone);
+    }
+
+    .contact > .contact-form {
+        max-width: 50%;
+    }
+
+    .contact > .location {
+        max-width: 50%;
+    }
+
+    .contact > .location > iframe {
+        height: 100%;
+    }
+}
+
+.faq {
+    width: 100%;
+    margin-top: var(--page-y-spacing);
+}
+
+.faq > .content {
+    width: 100%;
+    margin-top: 25px;
+    padding: 0 var(--page-x-deadzone);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.faq > .content > .card {
+    width: 100%;
+    background: linear-gradient(to right, var(--accent-color), rgb(158, 61, 74));
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+.faq > .content > .card > .title {
+    color: white;
+}
+
+.faq > .content > .card > .description {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.4;
+}
