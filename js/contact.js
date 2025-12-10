@@ -122,3 +122,26 @@ window.addEventListener("DOMContentLoaded", () => {
 serviceSelect.addEventListener("change", () => {
     handleMenus();
 })
+
+// Block web3forms popup and use my own
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // stop normal redirect
+
+    const formData = new FormData(form);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+        window.alert("Email sent!");
+        form.reset();
+    } else {
+        alert("Something went wrong. Please try again.");
+    }
+});
