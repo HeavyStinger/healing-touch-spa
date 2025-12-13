@@ -130,6 +130,14 @@ const form = document.getElementById("contact-form");
 form.addEventListener("submit", async (e) => {
     e.preventDefault(); // stop normal redirect
 
+    // captcha front end validation
+    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+    if (!hCaptcha) {
+        window.alert("Please fill out captcha field");
+        return;
+    }
+
     const formData = new FormData(form);
 
     const response = await fetch("https://api.web3forms.com/submit", {
