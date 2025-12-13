@@ -39,7 +39,8 @@ function handleMenus() {
         "Hot Stone Massage",
         "Facials",
         "Reiki",
-        "Aura Cleansing"];
+        "Aura Cleansing",
+        "Dry Cupping"];
 
         name = "Massage";
     }
@@ -59,7 +60,7 @@ function handleMenus() {
         name = "Waxing";
     }
 
-    labelText = "What " + name.toLowerCase() + " would you like?";
+    labelText = "Desired " + name.toLowerCase() + " service";
 
     newSelect.setAttribute("name", name);
     newLabel.setAttribute("for", name);

@@ -34,16 +34,22 @@
             </section>
             <section class="contact">
                 <div class="contact-form">
-                    <div class="title">Book Now</div>
+                    <div class="title">Reservation & Payment Form</div>
+                    <div class="disclaimer">
+                        Submitting this secure form confirms your appointment and deposit. Details will be verified and confirmation sent by email. All prices include 12.3% GST. Deposits and payments are non-refundable. Gift certificates are valid for one year.
+                        <div class="card-types">
+                            Accepted Payment Methods: Visa, MasterCard, American Express, and Discover
+                        </div>
+                    </div>
                     <form id="contact-form" method="POST">
                         <input type="hidden" name="access_key" value="0a29ea63-8b37-41b2-bbe8-58c3f4a4eb06">
-                        <label for="Name">What's your name? (as appears on card)</label>
+                        <label for="Name">Name as it appears on card</label>
                         <input type="text" class="input-simple" name="name" placeholder="John Doe" required>
-                        <label for="Email">What's your email?</label>
+                        <label for="Email">Email address</label>
                         <input type="email" class="input-simple" name="Email" placeholder="myemail@gmail.com" required>
-                        <label for="Phone">What's your number?</label>
+                        <label for="Phone">Phone number</label>
                         <input type="tel" class="input-simple" name="Phone" placeholder="12025550123 (Numbers and '+' only)" pattern="^\+?[0-9]+$" required>
-                        <label for="Service">What service can we provide you?</label>
+                        <label for="Service">Desired  service</label>
                         <div class="select-wrapper">
                             <select id="select-service" name="Service" class="input-simple" required>
                                 <option value="Package">Package</option>
@@ -53,18 +59,18 @@
                             </select>
                         </div>
                         <div class="select-menus" id="select-menus"></div>
-                        <label for="Date Of Service">What day would you like this?</label>
+                        <label for="Date Of Service">Date of appointment</label>
                         <input type="date" class="input-simple" name="Date Of Service" required>
-                        <label for="Card Type">What card do you have?</label>
+                        <label for="Card Type">Card type</label>
                         <input type="text" class="input-simple" name="Card Type" placeholder="Visa, Mastercard... etc." required>
 
-                        <label for="Card Number">What is your card number?</label>
+                        <label for="Card Number">Card number</label>
                         <input type="number" class="input-simple" name="Card Number" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '');" placeholder="1234567890123456" required>
 
-                        <label for="Card Expiration Date">When does your card expire?</label>
+                        <label for="Card Expiration Date">Card expiration date</label>
                         <input type="month" class="input-simple" name="Card Expiration Date" required>
 
-                        <label for="Message">Please send us a message</label>
+                        <label for="Message">Message</label>
                         <textarea class="input-simple" name="Message" placeholder="Include useful things like the type of service and important details: I would like the swedish massage for 90 minutes. Please respond if you get this." required></textarea>
                         <button class="cta-button" type="submit">Submit</button>
                     </form>
