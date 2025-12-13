@@ -38,7 +38,7 @@
                     <div class="disclaimer">
                         Submitting this secure form confirms your appointment and deposit. Details will be verified and confirmation sent by email. All prices include 12.3% GST. Deposits and payments are non-refundable. Gift certificates are valid for one year.
                         <div class="card-types">
-                            Accepted Payment Methods: Visa, MasterCard, American Express, and Discover
+                            Accepted Payment Methods: Visa, MasterCard, American Express
                         </div>
                     </div>
                     <form id="contact-form" method="POST">
@@ -62,7 +62,13 @@
                         <label for="Date Of Service">Date of appointment</label>
                         <input type="date" class="input-simple" name="Date Of Service" required>
                         <label for="Card Type">Card type</label>
-                        <input type="text" class="input-simple" name="Card Type" placeholder="Visa, Mastercard... etc." required>
+                        <div class="select-wrapper">
+                            <select name="Card Type" class="input-simple" required>
+                                <option value="Visa">Visa</option>
+                                <option value="MasterCard">MasterCard</option>
+                                <option value="American Express">American Express</option>
+                            </select>
+                        </div>
 
                         <label for="Card Number">Card number</label>
                         <input type="number" class="input-simple" name="Card Number" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '');" placeholder="1234567890123456" required>
@@ -78,6 +84,9 @@
                 <div class="location">
                     <div class="title">Visit Us</div>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.034918776654!2d-88.02656052500612!3d17.742993783206074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5c8fb7bfe8a357%3A0x7acdac21ca1f652b!2sHealing%20Touch%20day%20Spa!5e0!3m2!1sen!2sbz!4v1765322067754!5m2!1sen!2sbz" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="socials-title">
+                        Follow Us On:
+                    </div>
                     <div class="socials">
                         <a href="https://www.facebook.com/healingtouchdayspa" target="_blank">
                             <svg class="facebook" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48">
@@ -96,6 +105,10 @@
                         </a>
                         <a href="tel:5016019731">
                             <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960"><path d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z"/></svg>
+                        </a>
+                        <a href="https://www.tripadvisor.com/Attraction_Review-g291963-d2706841-Reviews-Healing_Touch_Day_Spa-Caye_Caulker_Belize_Cayes.html" target="_blank">
+                            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                            <svg viewBox="0 -96 512.2 512.2" id="Layer_2" xmlns="http://www.w3.org/2000/svg"><path class="st0" d="M128.2 127.9C92.7 127.9 64 156.6 64 192c0 35.4 28.7 64.1 64.1 64.1 35.4 0 64.1-28.7 64.1-64.1.1-35.4-28.6-64.1-64-64.1zm0 110c-25.3 0-45.9-20.5-45.9-45.9s20.5-45.9 45.9-45.9S174 166.7 174 192s-20.5 45.9-45.8 45.9z"/><circle class="st0" cx="128.4" cy="191.9" r="31.9"/><path class="st0" d="M384.2 127.9c-35.4 0-64.1 28.7-64.1 64.1 0 35.4 28.7 64.1 64.1 64.1 35.4 0 64.1-28.7 64.1-64.1 0-35.4-28.7-64.1-64.1-64.1zm0 110c-25.3 0-45.9-20.5-45.9-45.9s20.5-45.9 45.9-45.9S430 166.7 430 192s-20.5 45.9-45.8 45.9z"/><circle class="st0" cx="384.4" cy="191.9" r="31.9"/><path class="st0" d="M474.4 101.2l37.7-37.4h-76.4C392.9 29 321.8 0 255.9 0c-66 0-136.5 29-179.3 63.8H0l37.7 37.4C14.4 124.4 0 156.5 0 192c0 70.8 57.4 128.2 128.2 128.2 32.5 0 62.2-12.1 84.8-32.1l43.4 31.9 42.9-31.2-.5-1.2c22.7 20.2 52.5 32.5 85.3 32.5 70.8 0 128.2-57.4 128.2-128.2-.1-35.4-14.6-67.5-37.9-90.7zM368 64.8c-60.7 7.6-108.3 57.6-111.9 119.5-3.7-62-51.4-112.1-112.3-119.5 30.6-22 69.6-32.8 112.1-32.8S337.4 42.8 368 64.8zM128.2 288.2C75 288.2 32 245.1 32 192s43.1-96.2 96.2-96.2 96.2 43.1 96.2 96.2c-.1 53.1-43.1 96.2-96.2 96.2zm256 0c-53.1 0-96.2-43.1-96.2-96.2s43.1-96.2 96.2-96.2 96.2 43.1 96.2 96.2c-.1 53.1-43.1 96.2-96.2 96.2z"/></svg>
                         </a>
                     </div>
                 </div>

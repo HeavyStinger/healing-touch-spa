@@ -853,6 +853,11 @@
     border-radius: 10px;
 }
 
+.contact > .location > .socials-title {
+    width: 100%;
+    text-align: center;
+}
+
 .contact > .location > .socials {
     width: 100%;
     /* padding: 0 var(--page-x-deadzone); */
