@@ -3,10 +3,44 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
+
+        <title>About Us | Healing Touch Day Spa</title>
+
+        <meta name="description" content="Learn about Healing Touch Day Spa, the island’s first spa. Meet our team, discover our mission, vision, and values, and experience holistic healing inspired by nature.">
+
+        <!-- Canonical URL (space encoded) -->
+        <link rel="canonical" href="https://healingtouchdayspa.com/about%20us.html">
+
+        <!-- Open Graph (no Twitter, as requested) -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="About Us | Healing Touch Day Spa">
+        <meta property="og:description" content="Discover the story, mission, and people behind Healing Touch Day Spa — a sanctuary for holistic healing and relaxation.">
+        <meta property="og:url" content="https://healingtouchdayspa.com/about%20us.html">
+        <meta property="og:image" content="https://healingtouchdayspa.com/images/logo.png">
+
+        <!-- Styles & Favicon -->
         <link rel="stylesheet" type="text/css" href="./css/style.css">
         <link rel="icon" type="image/x-icon" href="./images/logo.ico">
-        <title>Healing Touch</title>
+
+        <!-- Local Business Schema -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Spa",
+            "name": "Healing Touch Day Spa",
+            "image": "https://healingtouchdayspa.com/images/logo.png",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Avenida Hicaco",
+                "addressLocality": "Caye Caulker",
+                "addressCountry": "BZ"
+            },
+            "telephone": "+5016019731",
+            "email": "edenbelize@hotmail.com",
+            "openingHours": "Mo-Sa 09:00-18:00",
+            "url": "https://healingtouchdayspa.com"
+        }
+        </script>
     </head>
     <body>
         <nav>
@@ -16,9 +50,9 @@
                 <a href="#">About Us</a>
                 <a href="services.html">Services</a>
                 <a href="contact.html">Contact</a>
-                <button class="cta-button">Book An Appointment</button>
+                <a class="cta-button" skate-type="OG">Book An Appointment</a>
             </div>
-            <a class="cta-button">Book An Appointment</a>
+            <a class="cta-button" skate-type="OG">Book An Appointment</a>
             <div class="hamburger">
                 <input class="menu-btn" type="checkbox" id="menu-btn" name="menu-btn" />
                 <label class="menu-icon" for="menu-btn">
