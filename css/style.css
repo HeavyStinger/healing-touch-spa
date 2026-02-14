@@ -21,7 +21,7 @@
     background-image: linear-gradient(to top right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
     url(../images/hero.webp);
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     background-blend-mode: multiply;
     position: relative;
 }
