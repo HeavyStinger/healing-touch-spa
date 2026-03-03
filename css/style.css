@@ -20,9 +20,10 @@
     width: 100%;
     background-image: linear-gradient(to top right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
     url(../images/hero.webp);
-    background-size: cover;
+    background-size: cover !important;
     background-position: center;
     background-blend-mode: multiply;
+    background-repeat: no-repeat !important;
     position: relative;
 }
 
