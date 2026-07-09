@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://healingtouchdayspa.com/sitemap.xml

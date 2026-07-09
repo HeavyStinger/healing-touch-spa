@@ -1,0 +1,1126 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400&display=swap');
+
+/* Libraries */
+@import url("../vendor/corbzhamburger/hamburger.css");
+
+@import url("reset.css");
+@import url("variables.css");
+@import url("base.css");
+
+/* Global Styles */
+
+/* group-style Homepage */
+
+/* Hero */
+
+.hero {
+    min-height: 500px;
+    width: 100%;
+    background-image: linear-gradient(to top right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
+    url(../images/hero.webp);
+    background-size: cover !important;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat !important;
+    position: relative;
+}
+
+.hero > .content {
+    position: absolute;
+    top: 55%;
+    left: 30px;
+    transform: translateY(-50%);
+    /* bottom: 80px; */
+    color: white;
+}
+
+.hero > .content > .subtitle {
+    font-size: 14px;
+    opacity: 0.8;
+    text-transform: capitalize;
+}
+
+.hero > .content > .title {
+    margin-top: 2px;
+    font-family: var(--accent-font);
+    font-weight: normal;
+    /* font-size: 80px; */
+    font-size: 60px;
+    text-transform: capitalize;
+    line-height: 1;
+}
+
+.hero > .content > .title > span {
+    color: var(--accent-color);
+    display: block;
+}
+
+.hero > .content > .cta-button {
+    margin-top: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+    .hero {
+        min-height: 600px;
+        width: calc(100% - (var(--page-x-deadzone) * 2));
+        margin: 0 var(--page-x-deadzone);
+        border-radius: var(--global-border-radius);
+    }
+
+    .hero > .content {
+        top: unset;
+        bottom: 50px;
+        left: 50px;
+        transform: unset;
+    }
+}
+
+/* Desktop: the hero image is portrait, so as the box gets wider and
+   flatter the default center crop pushes below the subject's face.
+   Taller box + a higher focal point keeps the framing natural. */
+@media only screen and (min-width: 1200px) {
+    .hero {
+        min-height: 680px;
+        background-position: center 20%;
+    }
+
+    .hero > .content {
+        max-width: 620px;
+        bottom: 70px;
+        left: 70px;
+    }
+
+    .hero > .content > .subtitle {
+        font-size: 16px;
+    }
+
+    .hero > .content > .title {
+        font-size: 74px;
+    }
+}
+
+/* Widescreen/ultrawide: content width is capped via --page-x-deadzone,
+   so just carry the same proportions further with a bit more room. */
+@media only screen and (min-width: 1900px) {
+    .hero {
+        min-height: 760px;
+    }
+
+    .hero > .content {
+        max-width: 680px;
+        bottom: 100px;
+        left: 100px;
+    }
+
+    .hero > .content > .title {
+        font-size: 88px;
+    }
+}
+
+.packages-home {
+    width: 100%;
+    margin-top: var(--page-y-spacing);
+}
+
+.packages-home > .content {
+    width: 100%;
+    margin-top: 25px;
+    padding: 0 var(--page-x-deadzone);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.packages-home > .content > .card {
+    max-width: 350px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 7px 7px 20px 7px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.packages-home > .content > .card > .top {
+    width: 100%;
+    background-color: white;
+    padding: 20px 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.08);
+}
+
+.packages-home > .content > .card > .top.featured::after {
+    content: attr(data-tag);
+    padding: 5px 10px;
+    position: absolute;
+    background-color: rgb(158, 61, 74);
+    top: 5px;
+    right: 5px;
+    display: block;
+    color: white;
+    font-size: 10px;
+    border-radius: 10px;
+}
+
+.packages-home > .content > .card > .top > .title {
+    font-size: 25px;
+}
+
+.packages-home > .content > .card > .top > .subtitle {
+    padding-bottom: 10px;
+    font-size: 15px;
+    color: grey;
+    border-bottom: dotted 1px var(--accent-color);
+}
+
+.packages-home > .content > .card > .top > .price {
+    padding: 10px 0 0 0;
+}
+
+.packages-home > .content > .card > .top > .price > strong {
+    color: black;
+    font-size: 28px;
+}
+
+.packages-home > .content > .card > .center {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 0 10px;
+}
+
+.packages-home > .content > .card > .center > .title {
+    /* font-family: var(--accent-font); */
+    font-size: 12px;
+    color: grey;
+    text-transform: uppercase;
+}
+
+.packages-home > .content > .card > .center > .duration {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.packages-home > .content > .card > .center > .duration > svg {
+    height: 17px;
+}
+
+.packages-home > .content > .card > .center > .features-title {
+    margin-top: 20px;
+}
+
+.packages-home > .content > .card > .center > .features {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.packages-home > .content > .card > .center > .features > .sub-features {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.packages-home > .content > .card > .cta-button {
+    width: calc(100% - 20px);
+    margin: auto 0 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.packages-home > .content > .card > .cta-button > svg {
+    height: 20px;
+    fill: white;
+}
+
+@media only screen and (min-width: 1160px) {
+    .packages-home > .content > .card:nth-child(odd) {
+        height: 524px;
+    }
+}
+
+/* Services */
+.services-home {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    margin-top: var(--page-y-spacing);
+    padding: 0 var(--page-x-deadzone);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-title {
+    padding: 0 var(--page-x-deadzone);
+    text-align: center;
+    font-family: var(--accent-font);
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.section-subtitle {
+    padding: 0 var(--page-x-deadzone);
+    text-align: center;
+}
+
+.services-home > .content {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--page-y-spacing);
+}
+
+.services-home > .content > .card {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.services-home > .content > .card > img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.services-home > .content > .card > .title {
+    width: 100%;
+    margin-top: 0px;
+    padding: 0 20px;
+    /* font-family: var(--accent-font); */
+    text-align: center;
+    font-size: 22px;
+}
+
+.services-home > .content > .card > .details {
+    padding: 10px 20px 20px 20px;
+    text-align: justify;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.travel-button {
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .services-home > .content {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--page-x-deadzone);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .services-home > .content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Testimonials */
+
+.testimonials {
+    width: 100%;
+    margin-top: var(--page-y-spacing);
+    padding: 0 var(--page-x-deadzone);
+    position: relative;
+}
+
+.testimonials > .content {
+    margin: 25px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--page-y-spacing);
+}
+
+.testimonials > .content > .card {
+    min-height: 350px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: color;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    color: rgba(0, 0, 0, 0.8);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.testimonials > .content > .card > .description {
+    font-style: italic;
+    line-height: 1.2;
+    transition: opacity 0.2s;
+}
+
+.testimonials > .content > .card > .name {
+    color: black;
+    font-family: var(--accent-font);
+    /* font-weight: bold; */
+    font-size: 25px;
+    /* color: var(--accent-color); */
+    transition: color 0.2s;
+}
+
+/* Card hover animation */
+.testimonials > .content > .card:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.testimonials > .content > .card:hover > .description {
+    opacity: 0;
+}
+
+.testimonials > .content > .card:hover > .name {
+    color: white;
+}
+
+@media only screen and (min-width: 650px) {
+    .testimonials > .content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 975px) {
+    .testimonials > .content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* groud-style About us page */
+
+.our-spa {
+    width: 100%;
+    margin-top: var(--page-y-spacing);
+}
+
+.team {
+    width: 100%;
+    background-color: var(--secondary-color);
+    margin-top: var(--page-y-spacing);
+    padding: 50px 0;
+}
+
+.team > .content {
+    width: 100%;
+    margin-top: 65px;
+    padding: 0 var(--page-x-deadzone);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 65px;
+    /* justify-content: space-evenly; */
+}
+
+.team > .content > .card {
+    min-height: 520px;
+    width: 100%;
+    max-width: 450px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+    filter: brightness(0.9);
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.team > .content > .card.active {
+    overflow: visible;
+}
+
+.team > .content > .card > .details {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(79, 132, 154, 0.7);
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    color: white;
+    position: absolute;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: top 0.4s;
+    border-radius: 5px;
+}
+
+.team > .content > .card > .details.active {
+    top: 0;
+}
+
+.team > .content > .card > .details > .title {
+    background-color: rgb(79, 132, 154);
+    padding: 5px 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+}
+
+.team > .content > .card > .details > .title::after {
+    content: "";
+    height: 7px;
+    width: 7px;
+    margin-top: 5px;
+    display: block;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(-45deg);
+    transition: transform 0.4s;
+}
+
+.team > .content > .card > .details.active > .title::after {
+    transform: rotate(135deg);
+}
+
+.team > .content > .card > .details > .name {
+    width: 100%;
+    text-align: center;
+    font-family: var(--accent-font);
+    font-size: 28px;
+}
+
+@media only screen and (min-width: 742px) {
+    .team > .content {
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width: 1116px) {
+    .team > .content {
+        flex-wrap: initial;
+    }
+}
+
+/* Mission */
+
+.mission {
+    width: 100%;
+    margin-top: var(--page-y-spacing);
+}
+
+.mission > .content {
+    width: 100%;
+    padding: 0 var(--page-x-deadzone);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.mission > .content > .card {
+    min-height: 350px;
+    width: 100%;
+    max-width: 350px;
+    background-color: var(--accent-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.4;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.35);
+}
+
+.mission > .content > .card.misssion {
+    background-color: rgb(158, 61, 74);
+}
+
+.mission > .content > .card.vision {
+    background-color: rgb(122, 109, 178);
+}
+
+.mission > .content > .card > .title {
+    font-size: 20px;
+    color: white;
+}
+
+@media only screen and (min-width: 810px) {
+    .mission > .content {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+/* group-style Services page */
+
+.services {
+    width: 100%;
+    margin-top: var(--page-y-spacing);
+}
+
+.services > .content {
+    width: 100%;
+    margin-top: var(--page-y-spacing);
+    padding: 0 var(--page-x-deadzone);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--page-y-spacing);
+}
+
+.services > .content > .card {
+    min-height: 350px;
+    max-width: 350px;
+    width: 100%;
+    background-color: rgb(158, 61, 74);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+.services > .content > .card > .title {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.services > .content > .card > .description {
+    line-height: 1.3;
+}
+
+.services > .content > .card > .benefits, .services > .content > .card > .prices {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.services > .content > .card > .prices > .price {
+    display: flex;
+}
+
+.services > .content > .card > .prices > .price > .time::after {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 0 10px 2px 10px;
+    padding: 3px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.services > .content > .card > .prices > .price > .cost {
+    color: white;
+    font-weight: bold;
+}
+
+.services > .content > .card > .prices > .price > .cost::before {
+    content: "$";
+    display: inline-block;
+}
+
+.services > .content > .card > .prices > .price > .cost::after {
+    content: "USD";
+    margin-left: 2px;
+    font-weight: normal;
+    display: inline-block;
+}
+
+.services > .content > .card > .benefits > .benefit {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.services > .content > .card > .benefits > .benefit > svg {
+    width: 20px;
+    fill: white;
+}
+
+.services > .content > .card > .prices {
+    margin-bottom: 20px;
+}
+
+.services > .content > .card > .cta-button {
+    margin-top: auto;
+}
+
+@media only screen and (min-width: 810px) {
+    .services > .content {
+        justify-content: space-evenly;
+        align-items: unset;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .services > .content > .card {
+        max-width: 350px;
+        flex: 1 1 calc(40% - 50px);
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .services > .content > .card {
+        max-width: 400px;
+        flex: 1 1 calc(33% - 50px);
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .services > .content > .card {
+        max-width: 400px;
+        flex: 1 1 calc(25% - 50px);
+    }
+}
+
+.services-waxing {
+    width: 100%;
+    margin-top: var(--page-y-spacing);
+}
+
+.services-waxing > .content {
+    width: 100%;
+    margin-top: 25px;
+    padding: 0 var(--page-x-deadzone);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    gap: 25px;
+}
+
+.services-waxing > .content > .card {
+    max-width: 300px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+}
+
+.services-waxing > .content > .card > img {
+    margin: 0 auto 0 auto;
+    display: block;
+}
+
+.services-waxing > .content > .card > .title {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+.services-waxing > .content > .card > .prices {
+    width: 100%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.services-waxing > .content > .card > .prices > .price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.services-waxing > .content > .card > .prices > .price::after {
+    content: "";
+    height: 2px;
+    width: 25px;
+    background-color: var(--accent-color);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+.services-waxing > .content > .card > .prices > .price > .cost > span {
+    font-weight: bold;
+}
+
+.services-waxing > .content > .card > .cta-button {
+    width: 100%;
+    margin-top: auto;
+    display: block;
+}
+
+/* Contact Page */
+
+.contact {
+    width: 100%;
+    margin-top: var(--page-y-spacing);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--page-y-spacing);
+}
+
+.contact > .contact-form {
+    width: 100%;
+    max-width: 500px;
+    padding: 0 var(--page-x-deadzone);
+}
+
+.contact > .contact-form > .title {
+    font-size: 20px;
+}
+
+.contact > .contact-form > .disclaimer {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.contact > .contact-form > .disclaimer > .card-types {
+    margin-top: 5px;
+}
+
+.contact > .contact-form > form {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact > .contact-form > form > input {
+    width: 100%;
+    font-family: var(--primary-font);
+}
+
+.contact > .contact-form > form .input-simple {
+    padding: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    border-bottom: 2px solid var(--accent-color);
+    outline: none;
+}
+
+.contact > .contact-form > form > .select-menus {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact > .contact-form > form .select-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.contact > .contact-form > form .select-wrapper > select {
+    width: 100%;
+    cursor: pointer;
+}
+
+.contact > .contact-form > form .select-wrapper::after {
+    content: "";
+    height: 5px;
+    width: 5px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%) rotate(45deg);
+    border-right: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.contact > .contact-form > form label {
+    margin-top: 10px;
+}
+
+.contact > .contact-form > form > button[type=submit] {
+    margin-top: 20px;
+}
+
+.contact > .location {
+    width: 100%;
+    max-width: 500px;
+    padding: 0 var(--page-x-deadzone);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact > .location > .title {
+    font-size: 20px;
+}
+
+.contact > .location > iframe {
+    height: 350px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.contact > .location > .socials-title {
+    width: 100%;
+    text-align: center;
+}
+
+.contact > .location > .socials {
+    width: 100%;
+    /* padding: 0 var(--page-x-deadzone); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.contact > .location > .socials > a > svg {
+    height: 28px;
+}
+
+.contact > .location > .socials > a:hover > svg {
+    fill: var(--accent-color);
+}
+
+@media only screen and (min-width: 800px) {
+    .contact {
+        padding: 0 var(--page-x-deadzone);
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .contact > .contact-form {
+        width: auto;
+        flex: 1 1 600px;
+        max-width: 650px;
+        padding: 0;
+    }
+
+    .contact > .location {
+        width: auto;
+        flex: 1 1 550px;
+        max-width: 650px;
+        padding: 0;
+    }
+
+    .contact > .location > iframe {
+        height: 480px;
+    }
+}
+
+.faq {
+    width: 100%;
+    margin-top: var(--page-y-spacing);
+}
+
+.faq > .content {
+    width: 100%;
+    margin-top: 25px;
+    padding: 0 var(--page-x-deadzone);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.faq > .content > .card {
+    width: 100%;
+    background: linear-gradient(to right, var(--accent-color), rgb(158, 61, 74));
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+.faq > .content > .card > .title {
+    color: white;
+}
+
+.faq > .content > .card > .description {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* group-style Massages page */
+
+.massages {
+    width: 100%;
+    margin-top: var(--page-y-spacing);
+}
+
+.massage-list {
+    width: 100%;
+    max-width: 1100px;
+    margin: 25px auto 0 auto;
+    padding: 0 min(var(--page-x-deadzone), 50px);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.massage-list > .card {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.massage-list > .card > .media {
+    width: 100%;
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.massage-list > .card > .media > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.massage-list > .card > .info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.massage-list > .card > .info > .title {
+    font-family: var(--accent-font);
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.massage-list > .card > .info > .description {
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.massage-list > .card > .info > .benefits-title {
+    margin-top: 5px;
+    font-size: 12px;
+    color: grey;
+    text-transform: uppercase;
+}
+
+.massage-list > .card > .info > .benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.massage-list > .card > .info > .benefits > .benefit {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.massage-list > .card > .info > .benefits > .benefit > svg {
+    width: 16px;
+    flex-shrink: 0;
+    fill: var(--accent-color);
+}
+
+.massage-list > .card > .info > .actions {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.massage-list > .card > .info > .actions > .prices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.massage-list > .card > .info > .actions > .prices > .price {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border: 2px solid var(--accent-color);
+    border-radius: 25px;
+    font-size: 13px;
+    color: var(--accent-color);
+}
+
+.massage-list > .card > .info > .actions > .prices > .price > .cost {
+    font-weight: bold;
+}
+
+.massage-list > .card > .info > .actions > .prices > .price > .cost::before {
+    content: "$";
+}
+
+.massage-list > .card > .info > .actions > .cta-button {
+    width: fit-content;
+}
+
+@media only screen and (min-width: 800px) {
+    .massage-list > .card {
+        min-height: 260px;
+        padding: 25px;
+        gap: 30px;
+        flex-direction: row;
+    }
+
+    .massage-list > .card > .media {
+        width: 40%;
+        aspect-ratio: 4 / 3;
+        height: auto;
+    }
+
+    .massage-list > .card > .info {
+        width: 60%;
+    }
+
+    .massage-list > .card:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+}
