@@ -6,6 +6,7 @@ titles.forEach(title => {
         const details = title.parentElement;
         const card = details.parentElement;
         const checker = details.classList.toggle("active");
+        title.setAttribute("aria-expanded", checker ? "true" : "false");
 
         if (checker) {
             setTimeout(() => {
@@ -15,6 +16,5 @@ titles.forEach(title => {
         else {
             card.classList.toggle("active");
         }
-        console.log("Work");
     })
 });

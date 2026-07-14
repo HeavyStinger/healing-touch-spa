@@ -5,30 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="theme-color" content="#4f849a">
 
-        <title>Services | Healing Touch Day Spa</title>
+        <title>Spa Packages | Healing Touch Day Spa in Caye Caulker</title>
 
-        <meta name="description" content="Explore massage therapy, holistic healing, body scrubs, facials, Reiki, waxing, and spa packages at Healing Touch Day Spa. Personalized treatments designed for relaxation and renewal.">
+        <meta name="description" content="Explore our spa packages at Healing Touch Day Spa: Island Package, Maya Escape, and The Refined Man — combining massage, facials, and body scrubs in Caye Caulker.">
 
         <meta name="robots" content="index, follow">
 
-        <!-- Canonical URL -->
-        <link rel="canonical" href="https://healingtouchdayspa.com/services.html">
+        <!-- Canonical -->
+        <link rel="canonical" href="https://healingtouchdayspa.com/packages.html">
 
-        <!-- Open Graph (no Twitter) -->
+        <!-- Open Graph -->
         <meta property="og:type" content="website">
-        <meta property="og:title" content="Spa Services | Healing Touch Day Spa">
-        <meta property="og:description" content="Discover our full range of spa services, massage therapies, holistic treatments, and rejuvenating packages at Healing Touch Day Spa.">
-        <meta property="og:url" content="https://healingtouchdayspa.com/services.html">
+        <meta property="og:title" content="Spa Packages | Healing Touch Day Spa">
+        <meta property="og:description" content="Island Package, Maya Escape, and The Refined Man — full-experience spa packages combining massage, facials, and body scrubs in Caye Caulker.">
+        <meta property="og:url" content="https://healingtouchdayspa.com/packages.html">
         <meta property="og:image" content="https://healingtouchdayspa.com/images/logo.png">
 
-        <!-- Styles & Favicon -->
+        <!-- Styles -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Crimson+Text:wght@400&display=swap">
-        <link rel="preconnect" href="https://images.unsplash.com">
         <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+        <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="./images/logo.ico">
 
+        <!-- Local Business Schema -->
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -45,7 +47,16 @@
             "priceRange": "$10-$150",
             "email": "healingtouchdayspa501@gmail.com",
             "openingHours": "Mo-Sa 09:00-18:00",
-            "url": "https://healingtouchdayspa.com"
+            "url": "https://healingtouchdayspa.com",
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Packages",
+                "itemListElement": [
+                    { "@type": "Offer", "price": "125", "priceCurrency": "USD", "itemOffered": { "@type": "Service", "name": "Island Package", "description": "Full body massage, facial treatment, and a body scrub of your choice. Ideal for full renewal." } },
+                    { "@type": "Offer", "price": "150", "priceCurrency": "USD", "itemOffered": { "@type": "Service", "name": "Maya Escape", "description": "Relaxing healing massage, mini facial, body scrub of your choice, and a pampering steam shower-bath for deep relaxation and emotional balance." } },
+                    { "@type": "Offer", "price": "150", "priceCurrency": "USD", "itemOffered": { "@type": "Service", "name": "The Refined Man", "description": "Targeted foot therapy, full body massage, mini facial, and an invigorating body scrub. Perfect after a physically demanding day." } }
+                ]
+            }
         }
         </script>
     </head>
@@ -58,9 +69,9 @@
                 <a href="index.html">Home</a>
                 <a href="about-us.html">About Us</a>
                 <div class="nav-dropdown">
-                    <a href="#">Services</a>
+                    <a href="services.html">Services</a>
                     <div class="dropdown-menu">
-                        <a href="packages.html">Packages</a>
+                        <a href="#" class="active">Packages</a>
                         <a href="massages.html">Massages</a>
                         <a href="waxing.html">Waxing</a>
                     </div>
@@ -77,12 +88,12 @@
             </div>
         </nav>
         <main id="main-content">
-            <section class="hero" style="background-position: center;background-image:  linear-gradient(to top right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%), url(./images/services-hero.webp)">
+            <section class="hero" style="background-position: center;background-image: linear-gradient(to top right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%), url(./images/services-hero.webp);">
                 <div class="content">
-                    <h1 class="title">Our<br/><span>Services</span></h1>
+                    <h1 class="title">Our<br/><span>Packages</span></h1>
                 </div>
             </section>
-            <section class="packages-home">
+            <section class="packages-home" id="packages">
                 <h2 class="section-title">Packages</h2>
                 <div class="section-subtitle">
                     Buy 3 treatments 15% off
@@ -178,206 +189,8 @@
                         </a>
                     </div>
                 </div>
-            </section>
-            <section class="massages">
-                <h2 class="section-title">MASSAGES</h2>
-                <div class="section-subtitle">A preview of our massage menu — personalized treatments tailored to suit your unique preferences</div>
-                <div class="massage-list">
-
-                    <div class="card">
-                        <div class="media">
-                            <img src="./images/massages/swedish.webp" alt="Therapist performing a Swedish massage" width="400" height="300" loading="lazy" decoding="async">
-                        </div>
-                        <div class="info">
-                            <h3 class="title">Swedish Massage</h3>
-                            <div class="description">This technique uses five main strokes to stimulate the circulation of the blood through the soft tissue of the body.</div>
-                            <div class="benefits-title">Benefits</div>
-                            <div class="benefits">
-                                <div class="benefit">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
-                                    Improves blood circulation
-                                </div>
-                                <div class="benefit">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
-                                    Increases sleep
-                                </div>
-                            </div>
-                            <div class="actions">
-                                <div class="prices">
-                                    <div class="price"><span class="time">60 minutes</span><span class="cost">60</span></div>
-                                    <div class="price"><span class="time">90 minutes</span><span class="cost">85</span></div>
-                                </div>
-                                <a class="cta-button" skate-type="patdown|Swedish Massage">Book Service</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="media">
-                            <img src="./images/massages/deep tissue.webp" alt="Deep tissue massage treatment" width="400" height="300" loading="lazy" decoding="async">
-                        </div>
-                        <div class="info">
-                            <h3 class="title">Deep Tissue Massage</h3>
-                            <div class="description">Focuses on the re-alignment of deeper layers of muscle and connective tissue.</div>
-                            <div class="benefits-title">Benefits</div>
-                            <div class="benefits">
-                                <div class="benefit">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
-                                    Relieves stiffness
-                                </div>
-                                <div class="benefit">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
-                                    Relieves tension
-                                </div>
-                            </div>
-                            <div class="actions">
-                                <div class="prices">
-                                    <div class="price"><span class="time">60 minutes</span><span class="cost">60</span></div>
-                                    <div class="price"><span class="time">90 minutes</span><span class="cost">85</span></div>
-                                </div>
-                                <a class="cta-button" skate-type="patdown|Deep Tissue Massage">Book Service</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="media">
-                            <img src="https://images.unsplash.com/photo-1521133573892-e44906baee46?auto=format&fit=crop&w=1200&q=80" alt="Healing crystals used in an aura cleansing treatment" width="400" height="300" loading="lazy" decoding="async">
-                        </div>
-                        <div class="info">
-                            <h3 class="title">Aura Cleansing</h3>
-                            <div class="description">A Mayan-inspired treatment combining massage, reflexology, Reiki, gemstones, and copal smudging to cleanse and rebalance your energy field.</div>
-                            <div class="benefits-title">Benefits</div>
-                            <div class="benefits">
-                                <div class="benefit">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
-                                    Balances chakras
-                                </div>
-                                <div class="benefit">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
-                                    Cleanses and refreshes your aura
-                                </div>
-                                <div class="benefit">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
-                                    Promotes inner harmony
-                                </div>
-                            </div>
-                            <div class="actions">
-                                <div class="prices">
-                                    <div class="price"><span class="time">90 minutes</span><span class="cost">125</span></div>
-                                </div>
-                                <a class="cta-button" skate-type="patdown|Aura Cleansing">Book Service</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="media">
-                            <img src="./images/massages/reiki.webp" alt="Reiki energy healing session" width="400" height="300" loading="lazy" decoding="async">
-                        </div>
-                        <div class="info">
-                            <h3 class="title">Reiki</h3>
-                            <div class="description">A gentle hands-on healing technique that restores physical, emotional, and spiritual balance through the flow of universal energy.</div>
-                            <div class="benefits-title">Benefits</div>
-                            <div class="benefits">
-                                <div class="benefit">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
-                                    Balances the body’s energy
-                                </div>
-                                <div class="benefit">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
-                                    Supports emotional well-being
-                                </div>
-                            </div>
-                            <div class="actions">
-                                <div class="prices">
-                                    <div class="price"><span class="time">60 minutes</span><span class="cost">75</span></div>
-                                </div>
-                                <a class="cta-button" skate-type="patdown|Reiki">Book Service</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
                 <div class="travel-button">
-                    <a href="massages.html" class="cta-button">View All Massages</a>
-                </div>
-            </section>
-            <section class="services-waxing">
-                <h2 class="section-title">WAXING SERVICES</h2>
-                <div class="content">
-                    <!--
-                    Half Leg » $35 US
-                    Full Leg » $50 US
-                    Back or Chest » $75 US
-                    -->
-                    <div class="card">
-                        <img src="./images/waxing/facial.avif" alt="Facial waxing service" width="65" height="65" loading="lazy" decoding="async"/>
-                        <h3 class="title">Facial Waxing</h3>
-                        <div class="prices">
-                            <div class="price">
-                                <div class="area">Eyebrows</div>
-                                <div class="cost"><span>$10</span> USD</div>
-                            </div>
-                            <div class="price">
-                                <div class="area">Chin</div>
-                                <div class="cost"><span>$10</span> USD</div>
-                            </div>
-                            <div class="price">
-                                <div class="area">Lips</div>
-                                <div class="cost"><span>$10</span> USD</div>
-                            </div>
-                        </div>
-                        <a class="cta-button" skate-type="wax">Book Now</a>
-                    </div>
-                    <div class="card">
-                        <img src="./images/waxing/arm.avif" alt="Arm waxing service" width="65" height="65" loading="lazy" decoding="async"/>
-                        <h3 class="title">Arm Waxing</h3>
-                        <div class="prices">
-                            <div class="price">
-                                <div class="area">Underarm</div>
-                                <div class="cost"><span>$15</span> USD</div>
-                            </div>
-                            <div class="price">
-                                <div class="area">Half Arm</div>
-                                <div class="cost"><span>$25</span> USD</div>
-                            </div>
-                            <div class="price">
-                                <div class="area">Full Arm</div>
-                                <div class="cost"><span>$40</span> USD</div>
-                            </div>
-                        </div>
-                        <a class="cta-button" skate-type="wax">Book Now</a>
-                    </div>
-                    <div class="card">
-                        <img src="./images/waxing/leg.avif" alt="Leg waxing service" width="65" height="65" loading="lazy" decoding="async"/>
-                        <h3 class="title">Leg Waxing</h3>
-                        <div class="prices">
-                            <div class="price">
-                                <div class="area">Half Leg</div>
-                                <div class="cost"><span>$35</span> USD</div>
-                            </div>
-                            <div class="price">
-                                <div class="area">Full Leg</div>
-                                <div class="cost"><span>$50</span> USD</div>
-                            </div>
-                        </div>
-                        <a class="cta-button" skate-type="wax">Book Now</a>
-                    </div>
-                    <div class="card">
-                        <img src="./images/waxing/chest.avif" alt="Chest waxing service" width="65" height="65" loading="lazy" decoding="async"/>
-                        <h3 class="title">Chest Waxing</h3>
-                        <div class="prices">
-                            <div class="price">
-                                <div class="area">Full Chest</div>
-                                <div class="cost"><span>$75</span> USD</div>
-                            </div>
-                        </div>
-                        <a class="cta-button" skate-type="wax">Book Now</a>
-                    </div>
-                </div>
-                <div class="travel-button">
-                    <a href="waxing.html" class="cta-button">View All Waxing</a>
+                    <a href="services.html" class="cta-button">View Massages & Waxing</a>
                 </div>
             </section>
         </main>
@@ -395,9 +208,9 @@
                         <div class="title">All Pages</div>
                         <a href="index.html">Home</a>
                         <a href="about-us.html">About Us</a>
-                        <a href="#">Services</a>
+                        <a href="services.html">Services</a>
                         <div class="sub-links">
-                            <a href="packages.html">Packages</a>
+                            <a href="#">Packages</a>
                             <a href="massages.html">Massages</a>
                             <a href="waxing.html">Waxing</a>
                         </div>

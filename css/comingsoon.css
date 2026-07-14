@@ -84,7 +84,15 @@ body > .designer {
 }
 
 body > .designer > a {
-    height: max(1vw, 17px);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    text-decoration: none;
+}
+
+body > .designer > a:hover {
+    color: var(--accent-color);
 }
 
 body > .designer > a:hover > svg {

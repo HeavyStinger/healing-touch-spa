@@ -19,6 +19,15 @@ body {
     overflow-x: hidden;
 }
 
+h1, h2, h3 {
+    text-wrap: balance;
+}
+
+a, button {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
 /* Elements */
 .cta-button {
     background-color: var(--accent-color);
@@ -37,6 +46,47 @@ body {
 
 .cta-button:hover {
     background-color: rgb(79, 132, 154, 0.4);
+}
+
+.cta-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.skip-link {
+    position: absolute;
+    z-index: 10000;
+    top: -60px;
+    left: 10px;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 /* group-style Sections */
@@ -297,6 +347,25 @@ footer > .footer-content > .bottom > .footer-links a.active, footer > .footer-co
     color: var(--accent-color);
 }
 
+footer > .footer-content > .bottom > .footer-links > .sub-links {
+    margin-top: -10px;
+    padding-left: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-left: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+footer > .footer-content > .bottom > .footer-links > .sub-links > a {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+footer > .footer-content > .bottom > .footer-links > .sub-links > a.active,
+footer > .footer-content > .bottom > .footer-links > .sub-links > a:hover {
+    color: var(--accent-color);
+}
+
 footer > .footer-content > .bottom > .footer-contact {
     display: flex;
     flex-direction: column;
@@ -331,8 +400,15 @@ footer > .designer {
 }
 
 footer > .designer > a {
-    height: 17px;
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    /* text-decoration: none; */
+}
+
+footer > .designer > a:hover {
+    opacity: 0.75;
 }
 
 footer > .designer > a > svg {

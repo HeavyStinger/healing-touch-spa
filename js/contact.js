@@ -63,7 +63,7 @@ function handleMenus() {
     labelText = "Desired " + name.toLowerCase() + " service";
 
     newSelect.setAttribute("name", name);
-    newLabel.setAttribute("for", name);
+    newLabel.setAttribute("for", "new-dropdown");
 
     newLabel.textContent = labelText;
 
@@ -127,6 +127,9 @@ serviceSelect.addEventListener("change", () => {
 // Block web3forms popup and use my own
 const form = document.getElementById("contact-form");
 
+const submitButton = form.querySelector('button[type="submit"]');
+const captchaError = document.getElementById("captcha-error");
+
 form.addEventListener("submit", async (e) => {
     e.preventDefault(); // stop normal redirect
 
@@ -134,23 +137,32 @@ form.addEventListener("submit", async (e) => {
     const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
 
     if (!hCaptcha) {
-        window.alert("Please fill out captcha field");
+        captchaError.hidden = false;
         return;
     }
+    captchaError.hidden = true;
 
     const formData = new FormData(form);
+    const originalLabel = submitButton.textContent;
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending…";
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
-    });
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
 
-    const result = await response.json();
+        const result = await response.json();
 
-    if (result.success) {
-        window.alert("Email sent!");
-        form.reset();
-    } else {
-        alert("Something went wrong. Please try again.");
+        if (result.success) {
+            window.alert("Email sent!");
+            form.reset();
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
+    } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = originalLabel;
     }
 });

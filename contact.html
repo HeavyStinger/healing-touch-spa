@@ -3,10 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#4f849a">
 
         <title>Contact Healing Touch Day Spa | Book Spa & Massage in Caye Caulker</title>
 
         <meta name="description" content="Contact Healing Touch Day Spa in Caye Caulker to book massages, spa treatments, and holistic wellness services. Secure online reservations available.">
+
+        <meta name="robots" content="index, follow">
 
         <!-- Canonical -->
         <link rel="canonical" href="https://healingtouchdayspa.com/contact.html">
@@ -19,6 +22,9 @@
         <meta property="og:image" content="https://healingtouchdayspa.com/images/logo.png">
 
         <!-- Styles -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Crimson+Text:wght@400&display=swap">
         <link rel="stylesheet" href="./css/style.css">
 
         <!-- Favicon -->
@@ -50,7 +56,8 @@
     </head>
 
     <body>
-        <nav>
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+        <nav aria-label="Primary">
             <div class="logo"><img src="./images/logo.png" alt="Healing Touch Day Spa logo"/>Healing Touch</div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
@@ -58,8 +65,9 @@
                 <div class="nav-dropdown">
                     <a href="services.html">Services</a>
                     <div class="dropdown-menu">
+                        <a href="packages.html">Packages</a>
                         <a href="massages.html">Massages</a>
-                        <a href="services.html#waxing">Waxing</a>
+                        <a href="waxing.html">Waxing</a>
                     </div>
                 </div>
                 <a href="#">Contact</a>
@@ -68,12 +76,12 @@
             <a class="cta-button" skate-type="OG">Book An Appointment</a>
             <div class="hamburger">
                 <input class="menu-btn" type="checkbox" id="menu-btn" name="menu-btn" />
-                <label class="menu-icon" for="menu-btn">
-                    <span class="navicon" aria-label="Hamburger menu 'icon'"></span>
+                <label class="menu-icon" for="menu-btn" aria-label="Toggle navigation menu">
+                    <span class="navicon" aria-hidden="true"></span>
                 </label>
             </div>
         </nav>
-        <main>
+        <main id="main-content">
             <section class="hero" style="background-position: center;background-image: linear-gradient(to top right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%), url(./images/contact-hero.webp);">
                 <div class="content">
                     <h1 class="title">Contact<br/><span>Us Today</span></h1>
@@ -91,12 +99,12 @@
                     <form id="contact-form" method="POST">
                         <input type="hidden" name="access_key" value="5487beac-2a04-45d5-9bad-03b382a17b82">
                         <label for="Name">Name as it appears on card</label>
-                        <input type="text" class="input-simple" name="name" placeholder="John Doe" required>
+                        <input id="Name" type="text" class="input-simple" name="name" placeholder="John Doe…" autocomplete="cc-name" required>
                         <label for="Email">Email address</label>
-                        <input type="email" class="input-simple" name="Email" placeholder="myemail@gmail.com" required>
+                        <input id="Email" type="email" class="input-simple" name="Email" placeholder="myemail@gmail.com…" autocomplete="email" spellcheck="false" required>
                         <label for="Phone">Phone number</label>
-                        <input type="tel" class="input-simple" name="Phone" placeholder="12025550123 (Numbers and '+' only)" pattern="^\+?[0-9]+$" required>
-                        <label for="Service">Desired  service</label>
+                        <input id="Phone" type="tel" class="input-simple" name="Phone" placeholder="12025550123 (Numbers and '+' only)…" pattern="^\+?[0-9]+$" autocomplete="tel" required>
+                        <label for="select-service">Desired  service</label>
                         <div class="select-wrapper">
                             <select id="select-service" name="Service" class="input-simple" required>
                                 <option value="Package">Package</option>
@@ -106,27 +114,28 @@
                             </select>
                         </div>
                         <div class="select-menus" id="select-menus"></div>
-                        <label for="Date Of Service">Date of appointment</label>
-                        <input type="date" class="input-simple" name="Date Of Service" required>
-                        <label for="Card Type">Card type</label>
+                        <label for="Date-Of-Service">Date of appointment</label>
+                        <input id="Date-Of-Service" type="date" class="input-simple" name="Date Of Service" autocomplete="off" required>
+                        <label for="Card-Type">Card type</label>
                         <div class="select-wrapper">
-                            <select name="Card Type" class="input-simple" required>
+                            <select id="Card-Type" name="Card Type" class="input-simple" autocomplete="cc-type" required>
                                 <option value="Visa">Visa</option>
                                 <option value="MasterCard">MasterCard</option>
                                 <option value="American Express">American Express</option>
                             </select>
                         </div>
 
-                        <label for="Card Number">Card number</label>
-                        <input type="number" class="input-simple" name="Card Number" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '');" placeholder="1234567890123456" required>
+                        <label for="Card-Number">Card number</label>
+                        <input id="Card-Number" type="number" class="input-simple" name="Card Number" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '');" placeholder="1234567890123456…" autocomplete="cc-number" spellcheck="false" required>
 
-                        <label for="Card Expiration Date">Card expiration date</label>
-                        <input type="month" class="input-simple" name="Card Expiration Date" required>
+                        <label for="Card-Expiration-Date">Card expiration date</label>
+                        <input id="Card-Expiration-Date" type="month" class="input-simple" name="Card Expiration Date" autocomplete="cc-exp" required>
 
                         <label for="Message">Message</label>
-                        <textarea class="input-simple" name="Message" placeholder="Include useful things like the type of service and important details: I would like the swedish massage for 90 minutes. Please respond if you get this." required></textarea>
+                        <textarea id="Message" class="input-simple" name="Message" placeholder="Include useful things like the type of service and important details: I would like the swedish massage for 90 minutes…" required></textarea>
                         <div class="h-captcha" data-captcha="true"></div>
-                        <button class="cta-button" type="submit">Submit</button>
+                        <div id="captcha-error" class="form-error" role="alert" aria-live="polite" hidden>Please complete the captcha before submitting.</div>
+                        <button class="cta-button" type="submit">Submit Reservation</button>
                     </form>
                 </div>
                 <div class="location">
@@ -136,27 +145,27 @@
                         Follow Us On:
                     </div>
                     <div class="socials">
-                        <a href="https://www.facebook.com/healingtouchdayspa" target="_blank">
-                            <svg class="facebook" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48">
+                        <a href="https://www.facebook.com/healingtouchdayspa" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
+                            <svg class="facebook" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48" aria-hidden="true">
                                 <path d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"></path><path fill="#fff" d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z"></path>
                             </svg>
                         </a>
-                        <a href="https://wa.me/5016019731?text=I%20would%20like%20A%20massage" target="_blank">
+                        <a href="https://wa.me/5016019731?text=I%20would%20like%20A%20massage" target="_blank" rel="noopener noreferrer" aria-label="Message us on WhatsApp">
                             <?xml version="1.0" encoding="utf-8"?>
-                                <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <title>whatsapp</title>
                                 <path d="M26.576 5.363c-2.69-2.69-6.406-4.354-10.511-4.354-8.209 0-14.865 6.655-14.865 14.865 0 2.732 0.737 5.291 2.022 7.491l-0.038-0.070-2.109 7.702 7.879-2.067c2.051 1.139 4.498 1.809 7.102 1.809h0.006c8.209-0.003 14.862-6.659 14.862-14.868 0-4.103-1.662-7.817-4.349-10.507l0 0zM16.062 28.228h-0.005c-0 0-0.001 0-0.001 0-2.319 0-4.489-0.64-6.342-1.753l0.056 0.031-0.451-0.267-4.675 1.227 1.247-4.559-0.294-0.467c-1.185-1.862-1.889-4.131-1.889-6.565 0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353c0 6.822-5.53 12.353-12.353 12.353h-0zM22.838 18.977c-0.371-0.186-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.185-0.837 0.187-0.246 0.371-0.958 1.207-1.175 1.455-0.216 0.249-0.434 0.279-0.805 0.094-1.15-0.466-2.138-1.087-2.997-1.852l0.010 0.009c-0.799-0.74-1.484-1.587-2.037-2.521l-0.028-0.052c-0.216-0.371-0.023-0.572 0.162-0.757 0.167-0.166 0.372-0.434 0.557-0.65 0.146-0.179 0.271-0.384 0.366-0.604l0.006-0.017c0.043-0.087 0.068-0.188 0.068-0.296 0-0.131-0.037-0.253-0.101-0.357l0.002 0.003c-0.094-0.186-0.836-2.014-1.145-2.758-0.302-0.724-0.609-0.625-0.836-0.637-0.216-0.010-0.464-0.012-0.712-0.012-0.395 0.010-0.746 0.188-0.988 0.463l-0.001 0.002c-0.802 0.761-1.3 1.834-1.3 3.023 0 0.026 0 0.053 0.001 0.079l-0-0.004c0.131 1.467 0.681 2.784 1.527 3.857l-0.012-0.015c1.604 2.379 3.742 4.282 6.251 5.564l0.094 0.043c0.548 0.248 1.25 0.513 1.968 0.74l0.149 0.041c0.442 0.14 0.951 0.221 1.479 0.221 0.303 0 0.601-0.027 0.889-0.078l-0.031 0.004c1.069-0.223 1.956-0.868 2.497-1.749l0.009-0.017c0.165-0.366 0.261-0.793 0.261-1.242 0-0.185-0.016-0.366-0.047-0.542l0.003 0.019c-0.092-0.155-0.34-0.247-0.712-0.434z"></path>
                             </svg>
                         </a>
-                        <a href="mailto:healingtouchdayspa501@gmail.com">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+                        <a href="mailto:healingtouchdayspa501@gmail.com" aria-label="Email us">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
                         </a>
-                        <a href="tel:+5016019731">
-                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960"><path d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z"/></svg>
+                        <a href="tel:+5016019731" aria-label="Call us">
+                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960" aria-hidden="true"><path d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z"/></svg>
                         </a>
-                        <a href="https://www.tripadvisor.com/Attraction_Review-g291963-d2706841-Reviews-Healing_Touch_Day_Spa-Caye_Caulker_Belize_Cayes.html" target="_blank">
+                        <a href="https://www.tripadvisor.com/Attraction_Review-g291963-d2706841-Reviews-Healing_Touch_Day_Spa-Caye_Caulker_Belize_Cayes.html" target="_blank" rel="noopener noreferrer" aria-label="View our TripAdvisor reviews">
                             <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-                            <svg viewBox="0 -96 512.2 512.2" id="Layer_2" xmlns="http://www.w3.org/2000/svg"><path class="st0" d="M128.2 127.9C92.7 127.9 64 156.6 64 192c0 35.4 28.7 64.1 64.1 64.1 35.4 0 64.1-28.7 64.1-64.1.1-35.4-28.6-64.1-64-64.1zm0 110c-25.3 0-45.9-20.5-45.9-45.9s20.5-45.9 45.9-45.9S174 166.7 174 192s-20.5 45.9-45.8 45.9z"/><circle class="st0" cx="128.4" cy="191.9" r="31.9"/><path class="st0" d="M384.2 127.9c-35.4 0-64.1 28.7-64.1 64.1 0 35.4 28.7 64.1 64.1 64.1 35.4 0 64.1-28.7 64.1-64.1 0-35.4-28.7-64.1-64.1-64.1zm0 110c-25.3 0-45.9-20.5-45.9-45.9s20.5-45.9 45.9-45.9S430 166.7 430 192s-20.5 45.9-45.8 45.9z"/><circle class="st0" cx="384.4" cy="191.9" r="31.9"/><path class="st0" d="M474.4 101.2l37.7-37.4h-76.4C392.9 29 321.8 0 255.9 0c-66 0-136.5 29-179.3 63.8H0l37.7 37.4C14.4 124.4 0 156.5 0 192c0 70.8 57.4 128.2 128.2 128.2 32.5 0 62.2-12.1 84.8-32.1l43.4 31.9 42.9-31.2-.5-1.2c22.7 20.2 52.5 32.5 85.3 32.5 70.8 0 128.2-57.4 128.2-128.2-.1-35.4-14.6-67.5-37.9-90.7zM368 64.8c-60.7 7.6-108.3 57.6-111.9 119.5-3.7-62-51.4-112.1-112.3-119.5 30.6-22 69.6-32.8 112.1-32.8S337.4 42.8 368 64.8zM128.2 288.2C75 288.2 32 245.1 32 192s43.1-96.2 96.2-96.2 96.2 43.1 96.2 96.2c-.1 53.1-43.1 96.2-96.2 96.2zm256 0c-53.1 0-96.2-43.1-96.2-96.2s43.1-96.2 96.2-96.2 96.2 43.1 96.2 96.2c-.1 53.1-43.1 96.2-96.2 96.2z"/></svg>
+                            <svg viewBox="0 -96 512.2 512.2" id="Layer_2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path class="st0" d="M128.2 127.9C92.7 127.9 64 156.6 64 192c0 35.4 28.7 64.1 64.1 64.1 35.4 0 64.1-28.7 64.1-64.1.1-35.4-28.6-64.1-64-64.1zm0 110c-25.3 0-45.9-20.5-45.9-45.9s20.5-45.9 45.9-45.9S174 166.7 174 192s-20.5 45.9-45.8 45.9z"/><circle class="st0" cx="128.4" cy="191.9" r="31.9"/><path class="st0" d="M384.2 127.9c-35.4 0-64.1 28.7-64.1 64.1 0 35.4 28.7 64.1 64.1 64.1 35.4 0 64.1-28.7 64.1-64.1 0-35.4-28.7-64.1-64.1-64.1zm0 110c-25.3 0-45.9-20.5-45.9-45.9s20.5-45.9 45.9-45.9S430 166.7 430 192s-20.5 45.9-45.8 45.9z"/><circle class="st0" cx="384.4" cy="191.9" r="31.9"/><path class="st0" d="M474.4 101.2l37.7-37.4h-76.4C392.9 29 321.8 0 255.9 0c-66 0-136.5 29-179.3 63.8H0l37.7 37.4C14.4 124.4 0 156.5 0 192c0 70.8 57.4 128.2 128.2 128.2 32.5 0 62.2-12.1 84.8-32.1l43.4 31.9 42.9-31.2-.5-1.2c22.7 20.2 52.5 32.5 85.3 32.5 70.8 0 128.2-57.4 128.2-128.2-.1-35.4-14.6-67.5-37.9-90.7zM368 64.8c-60.7 7.6-108.3 57.6-111.9 119.5-3.7-62-51.4-112.1-112.3-119.5 30.6-22 69.6-32.8 112.1-32.8S337.4 42.8 368 64.8zM128.2 288.2C75 288.2 32 245.1 32 192s43.1-96.2 96.2-96.2 96.2 43.1 96.2 96.2c-.1 53.1-43.1 96.2-96.2 96.2zm256 0c-53.1 0-96.2-43.1-96.2-96.2s43.1-96.2 96.2-96.2 96.2 43.1 96.2 96.2c-.1 53.1-43.1 96.2-96.2 96.2z"/></svg>
                         </a>
                     </div>
                 </div>
@@ -191,32 +200,36 @@
                         <a href="index.html">Home</a>
                         <a href="about-us.html">About Us</a>
                         <a href="services.html">Services</a>
-                        <a href="massages.html">Massages</a>
+                        <div class="sub-links">
+                            <a href="packages.html">Packages</a>
+                            <a href="massages.html">Massages</a>
+                            <a href="waxing.html">Waxing</a>
+                        </div>
                         <a href="#">Contact</a>
                     </div>
                     <div class="footer-contact">
                         <div class="title">Contact Information</div>
                         <div class="location">
-                            <a href="https://maps.app.goo.gl/dEcZLLr7cZ4ZE9ns5" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
+                            <a href="https://maps.app.goo.gl/dEcZLLr7cZ4ZE9ns5" target="_blank" rel="noopener noreferrer">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
                                 Avenida Hicaco Caye Caulker
                             </a>
                         </div>
                         <div class="phone">
                             <a href="tel:+5016019731">
-                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960"><path d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960" aria-hidden="true"><path d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z"/></svg>
                                 +501 6019731
                             </a>
                         </div>
                         <div class="phone">
                             <a href="tel:+5012060380">
-                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960"><path d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960" aria-hidden="true"><path d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z"/></svg>
                                 +501 2060380
                             </a>
                         </div>
                         <div class="email">
                             <a href="mailto:healingtouchdayspa501@gmail.com">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" aria-hidden="true"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
                                 healingtouchdayspa501@gmail.com
                             </a>
                         </div>
@@ -224,10 +237,11 @@
                 </div>
             </div>
             <div class="designer">
-                Powered by Corbin Pacheco 
-                <a href="https://wa.me/5016063532?text=I%20am%20messaging%20from%20the%20Healing%20Touch%20Spa%20website" target="_blank">
+                Powered by
+                <a href="https://wa.me/5016008328?text=I%20am%20messaging%20from%20the%20Healing%20Touch%20Spa%20website" target="_blank" rel="noopener noreferrer" aria-label="Contact the developer on WhatsApp">
+                    Ctech International
                     <?xml version="1.0" encoding="utf-8"?>
-                        <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <title>whatsapp</title>
                         <path d="M26.576 5.363c-2.69-2.69-6.406-4.354-10.511-4.354-8.209 0-14.865 6.655-14.865 14.865 0 2.732 0.737 5.291 2.022 7.491l-0.038-0.070-2.109 7.702 7.879-2.067c2.051 1.139 4.498 1.809 7.102 1.809h0.006c8.209-0.003 14.862-6.659 14.862-14.868 0-4.103-1.662-7.817-4.349-10.507l0 0zM16.062 28.228h-0.005c-0 0-0.001 0-0.001 0-2.319 0-4.489-0.64-6.342-1.753l0.056 0.031-0.451-0.267-4.675 1.227 1.247-4.559-0.294-0.467c-1.185-1.862-1.889-4.131-1.889-6.565 0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353c0 6.822-5.53 12.353-12.353 12.353h-0zM22.838 18.977c-0.371-0.186-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.185-0.837 0.187-0.246 0.371-0.958 1.207-1.175 1.455-0.216 0.249-0.434 0.279-0.805 0.094-1.15-0.466-2.138-1.087-2.997-1.852l0.010 0.009c-0.799-0.74-1.484-1.587-2.037-2.521l-0.028-0.052c-0.216-0.371-0.023-0.572 0.162-0.757 0.167-0.166 0.372-0.434 0.557-0.65 0.146-0.179 0.271-0.384 0.366-0.604l0.006-0.017c0.043-0.087 0.068-0.188 0.068-0.296 0-0.131-0.037-0.253-0.101-0.357l0.002 0.003c-0.094-0.186-0.836-2.014-1.145-2.758-0.302-0.724-0.609-0.625-0.836-0.637-0.216-0.010-0.464-0.012-0.712-0.012-0.395 0.010-0.746 0.188-0.988 0.463l-0.001 0.002c-0.802 0.761-1.3 1.834-1.3 3.023 0 0.026 0 0.053 0.001 0.079l-0-0.004c0.131 1.467 0.681 2.784 1.527 3.857l-0.012-0.015c1.604 2.379 3.742 4.282 6.251 5.564l0.094 0.043c0.548 0.248 1.25 0.513 1.968 0.74l0.149 0.041c0.442 0.14 0.951 0.221 1.479 0.221 0.303 0 0.601-0.027 0.889-0.078l-0.031 0.004c1.069-0.223 1.956-0.868 2.497-1.749l0.009-0.017c0.165-0.366 0.261-0.793 0.261-1.242 0-0.185-0.016-0.366-0.047-0.542l0.003 0.019c-0.092-0.155-0.34-0.247-0.712-0.434z"></path>
                     </svg>

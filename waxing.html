@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Basic -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="theme-color" content="#4f849a">
 
-        <!-- SEO -->
-        <title>Healing Touch Day Spa | Massage & Wellness in Caye Caulker</title>
-        <meta name="description" content="Healing Touch Day Spa offers professional massage therapy, Reiki, deep tissue, and relaxation treatments in Caye Caulker. Restore your body, mind, and spirit.">
-        <meta name="robots" content="index, follow">
-        <link rel="canonical" href="https://healingtouchdayspa.com/">
+        <title>Waxing | Healing Touch Day Spa in Caye Caulker</title>
 
-        <!-- Open Graph (Facebook / WhatsApp) -->
+        <meta name="description" content="Explore our full waxing menu at Healing Touch Day Spa: Brazilian bikini, facial, arm, leg, chest, and back waxing in Caye Caulker.">
+
+        <meta name="robots" content="index, follow">
+
+        <!-- Canonical -->
+        <link rel="canonical" href="https://healingtouchdayspa.com/waxing.html">
+
+        <!-- Open Graph -->
         <meta property="og:type" content="website">
-        <meta property="og:title" content="Healing Touch Day Spa | Massage & Wellness">
-        <meta property="og:description" content="Soothing massage and personalized wellness treatments in Caye Caulker.">
-        <meta property="og:url" content="https://healingtouchdayspa.com/">
+        <meta property="og:title" content="Waxing | Healing Touch Day Spa">
+        <meta property="og:description" content="Brazilian bikini, facial, arm, leg, chest, and back waxing — explore our full waxing menu in Caye Caulker.">
+        <meta property="og:url" content="https://healingtouchdayspa.com/waxing.html">
         <meta property="og:image" content="https://healingtouchdayspa.com/images/logo.png">
 
         <!-- Styles -->
@@ -45,7 +47,19 @@
             "priceRange": "$10-$150",
             "email": "healingtouchdayspa501@gmail.com",
             "openingHours": "Mo-Sa 09:00-18:00",
-            "url": "https://healingtouchdayspa.com"
+            "url": "https://healingtouchdayspa.com",
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Waxing",
+                "itemListElement": [
+                    { "@type": "Offer", "price": "40", "priceCurrency": "USD", "itemOffered": { "@type": "Service", "name": "Brazilian Bikini Wax", "description": "Complete hair removal of the bikini area, including front, back, and between, with an optional landing strip." } },
+                    { "@type": "Offer", "price": "10", "priceCurrency": "USD", "itemOffered": { "@type": "Service", "name": "Facial Waxing", "description": "Eyebrow, chin, and lip waxing." } },
+                    { "@type": "Offer", "price": "15", "priceCurrency": "USD", "itemOffered": { "@type": "Service", "name": "Arm Waxing", "description": "Underarm, half arm, and full arm waxing." } },
+                    { "@type": "Offer", "price": "35", "priceCurrency": "USD", "itemOffered": { "@type": "Service", "name": "Leg Waxing", "description": "Half leg and full leg waxing." } },
+                    { "@type": "Offer", "price": "75", "priceCurrency": "USD", "itemOffered": { "@type": "Service", "name": "Chest Waxing", "description": "Full chest waxing." } },
+                    { "@type": "Offer", "price": "75", "priceCurrency": "USD", "itemOffered": { "@type": "Service", "name": "Back Waxing", "description": "Full back waxing." } }
+                ]
+            }
         }
         </script>
     </head>
@@ -55,14 +69,14 @@
         <nav aria-label="Primary">
             <div class="logo"><img src="./images/logo.png" alt="Healing Touch Day Spa logo"/>Healing Touch</div>
             <div class="nav-links">
-                <a href="#">Home</a>
+                <a href="index.html">Home</a>
                 <a href="about-us.html">About Us</a>
                 <div class="nav-dropdown">
                     <a href="services.html">Services</a>
                     <div class="dropdown-menu">
                         <a href="packages.html">Packages</a>
                         <a href="massages.html">Massages</a>
-                        <a href="waxing.html">Waxing</a>
+                        <a href="#" class="active">Waxing</a>
                     </div>
                 </div>
                 <a href="contact.html">Contact</a>
@@ -77,70 +91,111 @@
             </div>
         </nav>
         <main id="main-content">
-            <section class="hero">
+            <section class="hero" style="background-position: center;background-image: linear-gradient(to top right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%), url(./images/services-hero.webp);">
                 <div class="content">
-                    <div class="subtitle">Soothing your body, mind, and spirit</div>
-                    <h1 class="title">Healing<br/><span>with every touch</span></h1>
-                    <a class="cta-button" skate-type="OG">Book Now</a>
+                    <h1 class="title">Our<br/><span>Waxing</span></h1>
                 </div>
             </section>
-            <section class="services-home">
-                <h2 class="section-title">MASSAGE SAMPLES</h2>
-                <div class="section-subtitle">Personalized massage treatments tailored to suit your unique preferences</div>
+            <section class="services-waxing">
+                <h2 class="section-title">WAXING MENU</h2>
+                <div class="section-subtitle">Smooth, clean results tailored to the areas you need</div>
                 <div class="content">
+
                     <div class="card">
-                        <img src="./images/massages/swedish.webp" alt="Therapist performing a Swedish massage at Healing Touch Day Spa" width="400" height="300" loading="lazy" decoding="async">
-                        <div class="title">Swedish Massage</div>
-                        <div class="details">
-                            Treat yourself to the healing power of a Swedish massage. Our soothing, expert strokes ease tension, boost circulation, and melt away stress leaving you deeply relaxed, flexible, and renewed.
-                            You deserve to feel your best. Book today and let the stress slip away.
+                        <!-- <img src="https://images.unsplash.com/photo-1559185590-fcf099ac62c5?auto=format&fit=crop&w=1200&q=80" alt="Beauty salon treatment room" loading="lazy" decoding="async"/> -->
+                        <h3 class="title">Brazilian Bikini Wax</h3>
+                        <div class="prices">
+                            <div class="price">
+                                <div class="area">Service</div>
+                                <div class="cost"><span>$40</span> USD</div>
+                            </div>
                         </div>
+                        <a class="cta-button" skate-type="wax|Brazilian Bikini Wax">Book Now</a>
                     </div>
+
                     <div class="card">
-                        <img src="./images/massages/deep tissue.webp" alt="Deep tissue massage treatment at Healing Touch Day Spa" width="400" height="300" loading="lazy" decoding="async">
-                        <div class="title">Deep Tissue</div>
-                        <div class="details">
-                            Relieve Deep Tension. Reclaim Your Strength.
-                            Deep Tissue Massage targets stubborn tension by realigning deeper layers of muscle and connective tissue. Perfect for chronic pain, stiff necks, sore shoulders, and lower back tightness.
-                            Feel real relief. 
+                        <img src="./images/waxing/facial.avif" alt="Facial waxing service" width="65" height="65" loading="lazy" decoding="async"/>
+                        <h3 class="title">Facial Waxing</h3>
+                        <div class="prices">
+                            <div class="price">
+                                <div class="area">Eyebrows</div>
+                                <div class="cost"><span>$10</span> USD</div>
+                            </div>
+                            <div class="price">
+                                <div class="area">Chin</div>
+                                <div class="cost"><span>$10</span> USD</div>
+                            </div>
+                            <div class="price">
+                                <div class="area">Lips</div>
+                                <div class="cost"><span>$10</span> USD</div>
+                            </div>
                         </div>
+                        <a class="cta-button" skate-type="wax|Facial Waxing">Book Now</a>
                     </div>
+
                     <div class="card">
-                        <img src="./images/massages/reiki.webp" alt="Reiki energy healing session at Healing Touch Day Spa" width="400" height="300" loading="lazy" decoding="async">
-                        <div class="title">Reiki</div>
-                        <div class="details">
-                            Reiki is a hands-on spiritual healing practice that restores balance and promotes physical, emotional, mental, and spiritual well-being by channeling universal energy (“Rei” and “Ki”) through the palms.
+                        <img src="./images/waxing/arm.avif" alt="Arm waxing service" width="65" height="65" loading="lazy" decoding="async"/>
+                        <h3 class="title">Arm Waxing</h3>
+                        <div class="prices">
+                            <div class="price">
+                                <div class="area">Underarm</div>
+                                <div class="cost"><span>$15</span> USD</div>
+                            </div>
+                            <div class="price">
+                                <div class="area">Half Arm</div>
+                                <div class="cost"><span>$25</span> USD</div>
+                            </div>
+                            <div class="price">
+                                <div class="area">Full Arm</div>
+                                <div class="cost"><span>$40</span> USD</div>
+                            </div>
                         </div>
+                        <a class="cta-button" skate-type="wax|Arm Waxing">Book Now</a>
                     </div>
+
+                    <div class="card">
+                        <img src="./images/waxing/leg.avif" alt="Leg waxing service" width="65" height="65" loading="lazy" decoding="async"/>
+                        <h3 class="title">Leg Waxing</h3>
+                        <div class="prices">
+                            <div class="price">
+                                <div class="area">Half Leg</div>
+                                <div class="cost"><span>$35</span> USD</div>
+                            </div>
+                            <div class="price">
+                                <div class="area">Full Leg</div>
+                                <div class="cost"><span>$50</span> USD</div>
+                            </div>
+                        </div>
+                        <a class="cta-button" skate-type="wax|Leg Waxing">Book Now</a>
+                    </div>
+
+                    <div class="card">
+                        <img src="./images/waxing/chest.avif" alt="Chest waxing service" width="65" height="65" loading="lazy" decoding="async"/>
+                        <h3 class="title">Chest Waxing</h3>
+                        <div class="prices">
+                            <div class="price">
+                                <div class="area">Full Chest</div>
+                                <div class="cost"><span>$75</span> USD</div>
+                            </div>
+                        </div>
+                        <a class="cta-button" skate-type="wax|Chest Waxing">Book Now</a>
+                    </div>
+
+                    <div class="card">
+                        <img src="./images/waxing/back.avif" alt="Back waxing service" width="65" height="65" loading="lazy" decoding="async"/>
+                        <h3 class="title">Back Waxing</h3>
+                        <div class="prices">
+                            <div class="price">
+                                <div class="area">Full Back</div>
+                                <div class="cost"><span>$75</span> USD</div>
+                            </div>
+                        </div>
+                        <a class="cta-button" skate-type="wax|Back Waxing">Book Now</a>
+                    </div>
+
                 </div>
                 <div class="travel-button">
-                    <a href="services.html" class="cta-button">View All Services</a>
-                </div>
-            </section>
-            <section class="testimonials">
-                <h2 class="section-title">WHAT OUR CLIENTS SAY</h2>
-                <div class="section-subtitle">Real experiences from those who have embraced our healing touch</div>
-                <div class="content">
-                    <div class="card" style="background-image: url(./images/testimonials/1.webp);">
-                        <div class="description">
-                            " The process of setting an appointment was extremely smooth through WhatsApp. Manuel and Wendy were thorough and concentrated on the area we requested.
-                            Left there feeling like a million bucks walking on the sand. Pretty good way to start your day after big island activities.
-                            I'm sure the other massage places are fine but if you have big knots to work out, go here and see them "
-                        </div>
-                        <div class="name">John Norton</div>
-                    </div>
-                    <div class="card" style="background-image: url(./images/testimonials/2.webp);">
-                        <div class="description">
-                            " My wife and I had 90 minute massages today. Manuel did both of our treatments today and we were both In awe. Manuel is very skilled and perceptive. I wish I could take him back to Colorado with us. Thank you." 
-                        </div>
-                        <div class="name">Alex Van Acker</div>
-                    </div>
-                    <div class="card" style="background-image: url(./images/testimonials/3.webp);">
-                        <div class="description">
-                            " Best massage I've had in a while! After a bumpy boat ride my boyfriend and I were looking for a massage and we were really lucky to get an appointment immediately. It was sooo good! We came back two days later, before leaving the island, to enjoy this awesome treatment one last time. I can 110% recommend this place! The massage room is nice, the music relaxing, it’s clean and the massage is perfect! Thank you! "
-                        </div>
-                        <div class="name">Nina Schlichting</div>
-                    </div>
+                    <a href="services.html" class="cta-button">View Packages &amp; Massages</a>
                 </div>
             </section>
         </main>
@@ -156,13 +211,13 @@
                 <div class="bottom">
                     <div class="footer-links">
                         <div class="title">All Pages</div>
-                        <a href="#">Home</a>
+                        <a href="index.html">Home</a>
                         <a href="about-us.html">About Us</a>
                         <a href="services.html">Services</a>
                         <div class="sub-links">
                             <a href="packages.html">Packages</a>
                             <a href="massages.html">Massages</a>
-                            <a href="waxing.html">Waxing</a>
+                            <a href="#">Waxing</a>
                         </div>
                         <a href="contact.html">Contact</a>
                     </div>
