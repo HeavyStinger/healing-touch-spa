@@ -25,7 +25,7 @@ function handleMenus() {
     let name;
     let labelText;
     if (value == "Package") {
-        options = ["Island Packcage", "Maya Escape", "The Refined Man"];
+        options = ["Island Package", "Maya Escape", "The Refined Man"];
         name = "Package";
     }
     else if (value == "Massage") {
@@ -46,17 +46,12 @@ function handleMenus() {
     }
     else if (value == "Waxing") {
         options = ["Brazilian Bikini Wax",
-        "Eyebrows",
-        "Chin",
-        "Lips",
-        "Underarm",
-        "Half Arm",
-        "Full Arm",
-        "Half Leg",
-        "Full Leg",
-        "Full Chest",
-        "Full Back"];
-        
+        "Facial Waxing",
+        "Arm Waxing",
+        "Leg Waxing",
+        "Chest Waxing",
+        "Back Waxing"];
+
         name = "Waxing";
     }
 

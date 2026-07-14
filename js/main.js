@@ -36,15 +36,15 @@ window.addEventListener("DOMContentLoaded", () => {
         }
         else if (skateType.includes("patpack")) {
             const values = skateType.split("|");
-            button.href = page + "?" + "service=Package" + "&option=" + values[1];
+            button.href = page + "?" + "service=Package" + "&option=" + encodeURIComponent(values[1]);
         }
         else if (skateType.includes("patdown")) {
             const values = skateType.split("|");
-            button.href = page + "?" + "service=Massage" + "&option=" + values[1];
+            button.href = page + "?" + "service=Massage" + "&option=" + encodeURIComponent(values[1]);
         }
         else if (skateType.includes("wax")) {
             const values = skateType.split("|");
-            button.href = page + "?" + "service=Waxing" + "&option=" + values[1];
+            button.href = page + "?" + "service=Waxing" + "&option=" + encodeURIComponent(values[1]);
         }
         else {
             return;
