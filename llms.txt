@@ -1,0 +1,26 @@
+# Healing Touch Day Spa
+
+> Healing Touch Day Spa is a locally-owned day spa on Avenida Hicaco in Caye Caulker, Belize — the island's first established spa (founded 2000). It offers massage therapy, body scrubs, facials, energy work (Reiki, Aura Cleansing), waxing, and multi-treatment spa packages, with bookings taken through a reservation form on the Contact page.
+
+Location: Avenida Hicaco, Caye Caulker, Belize (Caye Caulker Cayes).
+Hours: Monday–Saturday 9:00am–6:00pm. Sunday by appointment only.
+Phone/WhatsApp: +501 6019731 (also +501 2060380). Email: healingtouchdayspa501@gmail.com.
+Price range: $10–$150 USD (also quoted in BZD, roughly 2x USD). All prices include 12.3% GST.
+Booking: every "Book Now" / "Book Service" button links to /contact.html with the chosen service pre-filled in the reservation form. There is no self-serve online checkout — submitting the form (with a refundable-free deposit charge and captcha) reserves the appointment, and confirmation is sent by email. A 24-hour cancellation notice is required.
+
+## Pages
+
+- [Home](https://healingtouchdayspa.com/): Spa overview, a short preview of the massage menu, and client testimonials.
+- [About Us](https://healingtouchdayspa.com/about-us.html): Spa history (the island's first spa, founded 2000 by Eva McFarlane), founder/co-founder bios, mission, vision, and values.
+- [Services](https://healingtouchdayspa.com/services.html): Hub page previewing Packages, Massages, and Waxing, each linking out to its full menu page.
+- [Packages](https://healingtouchdayspa.com/packages.html): Multi-treatment packages — Island Package ($125, 1.5 hrs: full body massage + facial + body scrub), Maya Escape ($150, 2 hrs, most popular: massage + mini facial + body scrub + steam shower), The Refined Man ($150, 2 hrs: foot therapy + full body massage + mini facial + body scrub).
+- [Massages](https://healingtouchdayspa.com/massages.html): Full massage and body-treatment menu (12 services, $40–$125): Swedish Massage, Deep Tissue Massage, Hot Stone Massage, Reflexology, Reiki, Aura Cleansing, Back & Neck Massage, After Sun Treatment, Herbal Salt Body Scrub, Lemongrass Body Scrub, Facials, Dry Cupping.
+- [Waxing](https://healingtouchdayspa.com/waxing.html): Full waxing menu ($10–$75): Brazilian Bikini Wax, Facial Waxing (eyebrows/chin/lips), Arm Waxing (underarm/half/full), Leg Waxing (half/full), Chest Waxing, Back Waxing.
+- [Contact](https://healingtouchdayspa.com/contact.html): Reservation/payment form, embedded map, cancellation policy FAQ, and social links (Facebook, WhatsApp, TripAdvisor).
+
+## Optional
+
+- [Sitemap](https://healingtouchdayspa.com/sitemap.xml): Full XML sitemap of all indexable pages.
+- [Facebook](https://www.facebook.com/healingtouchdayspa)
+- [TripAdvisor reviews](https://www.tripadvisor.com/Attraction_Review-g291963-d2706841-Reviews-Healing_Touch_Day_Spa-Caye_Caulker_Belize_Cayes.html)
+- [WhatsApp](https://wa.me/5016019731)
