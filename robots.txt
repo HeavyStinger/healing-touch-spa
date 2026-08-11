@@ -1,17 +1,27 @@
-# Healing Touch Day Spa — all crawlers welcome, nothing is disallowed.
+# Healing Touch Day Spa — robots.txt
+# Nothing on this site is disallowed. All crawlers, including AI assistants
+# and AI-training bots, are welcome to index and cite this content.
 
 User-agent: *
 Allow: /
 
-# Common AI assistant / LLM crawlers (explicitly allowed for clarity;
-# already covered by the wildcard rule above).
-User-agent: GPTBot
+# --- Search engines (explicit for clarity; already covered by "*" above) ---
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+# --- AI assistants & AI search crawlers ---
+# These fetch pages live to answer user questions (e.g. ChatGPT Search,
+# Perplexity, Claude web search). Allowing them lets this site be cited
+# in AI-generated answers.
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
-Allow: /
-
-User-agent: ClaudeBot
 Allow: /
 
 User-agent: Claude-User
@@ -20,13 +30,32 @@ Allow: /
 User-agent: Claude-SearchBot
 Allow: /
 
-User-agent: anthropic-ai
-Allow: /
-
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Perplexity-User
+Allow: /
+
+# --- AI model training crawlers ---
+# These collect data to train future models. Allowing them helps this
+# business's information surface accurately in future AI answers.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
 User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: meta-externalagent
 Allow: /
 
 User-agent: CCBot
