@@ -993,10 +993,6 @@
     font-weight: bold;
 }
 
-.massage-list > .card > .info > .actions > .prices > .price > .cost::before {
-    content: "$";
-}
-
 .massage-list > .card > .info > .actions > .cta-button {
     width: fit-content;
 }
